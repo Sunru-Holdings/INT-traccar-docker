@@ -7,7 +7,7 @@ env:
 on:
   push:
     branches:
-      - master
+      - master-sunru
       - v[0-9]+.[0-9]+.[a-z0-9]+
 
 defaults:
@@ -34,10 +34,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Set environment DOCKERHUB_IMAGE_TAGS on master
-        if: github.ref == 'refs/heads/master' && matrix.os == 'alpine'
+        if: github.ref == 'refs/heads/master-sunru' && matrix.os == 'alpine'
         run: echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:latest" >> $GITHUB_ENV
       - name: Set environment DOCKERHUB_IMAGE_TAGS
-        if: github.ref != 'refs/heads/master'
+        if: github.ref != 'refs/heads/master-sunru'
         run: |
           _BRANCH=${GITHUB_REF##*/}
           _VERSION=${_BRANCH#v*}
