@@ -1,5 +1,5 @@
 ---
-name: Build and push docker images
+name: Build and push docker images for suntrack
 
 env:
   DOCKERHUB_REPOSITORY: suntrackserver/suntrack
