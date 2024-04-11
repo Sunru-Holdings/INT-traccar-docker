@@ -8,12 +8,16 @@ DockerHub image: <https://hub.docker.com/r/traccar/traccar> ![](https://img.shie
 Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
-#### 5.X
-- **6.0.s1-alpine**, **5-alpine**, **alpine**, **6.0.s1**, **5**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.0.s1-alpine)
-- **6.0.s1-debian**, **5-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.0.s1-debian)
-- **6.0.s1-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.0.s1-ubuntu)
+#### 6.X
+- **6.1.s1-alpine**, **6-alpine**, **alpine**, **6.1.s1**, **6**, **latest** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-alpine)
+- **6.1.s1-debian**, **6-debian**, **debian** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-debian)
+- **6.1.s1-ubuntu**, **6-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-ubuntu)
 - _..._
-- _**5.0**, **5.0-alpine** / **5.0-debian** / **5.0-ubuntu**_
+- _**6.0.s1**, **6.0.s1-alpine** / **6.0.s1-debian** / **6.0.s1-ubuntu**_
+#### 5.X
+- _**5.10**, **5.10-alpine** / **5.10-debian** / **5.10-ubuntu**_
+- _..._
+- _**5.0**, **5.0-alpine** / **5.0-debian**_
 #### 4.X
 - _**4.15**, **4.15-alpine** / **4.15-debian** / **4.15-ubuntu**_
 - _..._
