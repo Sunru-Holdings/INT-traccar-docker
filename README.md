@@ -1,17 +1,17 @@
 Traccar in Docker
 ---
 
-**Traccar GPS Tracking System in Docker image.**
+**Suntrack GPS Tracking System in Docker image.**
 
-Official website: <https://www.traccar.org>  
-DockerHub image: <https://hub.docker.com/r/traccar/traccar> ![](https://img.shields.io/docker/stars/traccar/traccar) ![](https://img.shields.io/docker/pulls/traccar/traccar)  
-Maintainer: [Maxim Zalysin](https://github.com/magna-z)
+Official website: <https://www.suntrack.com.au>  
+DockerHub image: <https://hub.docker.com/r/suntrackserver/suntrack> ![](https://img.shields.io/docker/stars/suntrackserver/suntrack) ![](https://img.shields.io/docker/pulls/suntrackserver/suntrack)  
+Maintainer: [Dinith Herath](https://github.com/dinithherath)
 
 ## Available tags:
 #### 6.X
-- **6.1.s1-alpine**, **6-alpine**, **alpine**, **6.1.s1**, **6**, **latest** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-alpine)
-- **6.1.s1-debian**, **6-debian**, **debian** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-debian)
-- **6.1.s1-ubuntu**, **6-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-ubuntu)
+- **6.6.s1-alpine**, **6-alpine**, **alpine**, **6.6.s1**, **6**, **latest** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-alpine)
+- **6.6.s1-debian**, **6-debian**, **debian** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-debian)
+- **6.6.s1-ubuntu**, **6-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-ubuntu)
 - _..._
 - _**6.0.s1**, **6.0.s1-alpine** / **6.0.s1-debian** / **6.0.s1-ubuntu**_
 #### 5.X
@@ -27,9 +27,9 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 - _**3.16**, **3.16-alpine** / **3.16-debian**_
 
 ## Available multi-platform images:
-**Alpine based**: linux/amd64  
+**Alpine based**: linux/amd64, linux/arm64  
 **Debian based**: linux/amd64, linux/arm64  
-**Ubuntu based**: linux/amd64, linux/arm/v7, linux/arm64
+**Ubuntu based**: linux/amd64, linux/arm64, linux/arm/v7
 
 ## Container create example:
 1. **Create work directories:**
@@ -59,12 +59,13 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
     --publish 5000-5150:5000-5150/udp \
     --volume /opt/traccar/logs:/opt/traccar/logs:rw \
     --volume /opt/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
+    --volume /opt/traccar/data:/opt/traccar/data:rw \
     traccar/traccar:latest
     ```
 
 ## Database
 The default when executing the above `docker run` command is an internal H2 database but this should only be for basic use.  
-The `docker run` command also doesn't create a mount point on the host for the data folder which will cause the database to be lost when the container is recreated. This point can be mitigated by adding the line `-v /var/docker/traccar/data:/opt/traccar/data:rw \` after `-v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \` but it will still be using the H2 database.  
+
 The **recommended solution** for production use is to link to an external MySQL database and update the configuration `.xml`-file according to the [Traccar MySQL documentation](https://www.traccar.org/mysql/) and using the `docker run` command as-is.
 
 ## Default JVM options:
