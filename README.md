@@ -9,9 +9,9 @@ Maintainer: [Dinith Herath](https://github.com/dinithherath)
 
 ## Available tags:
 #### 6.X
-- **6.6.s1-alpine**, **6-alpine**, **alpine**, **6.6.s1**, **6**, **latest** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-alpine)
-- **6.6.s1-debian**, **6-debian**, **debian** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-debian)
-- **6.6.s1-ubuntu**, **6-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-ubuntu)
+- **6.10.0.s1-alpine**, **6-alpine**, **alpine**, **6.10.0.s1**, **6**, **latest** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-alpine)
+- **6.10.0.s1-debian**, **6-debian**, **debian** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-debian)
+- **6.10.0.s1-ubuntu**, **6-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/suntrackserver/suntrack/6.1.s1-ubuntu)
 - _..._
 - _**6.0.s1**, **6.0.s1-alpine** / **6.0.s1-debian** / **6.0.s1-ubuntu**_
 #### 5.X
